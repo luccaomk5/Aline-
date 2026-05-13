@@ -1,50 +1,246 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
+```html
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aline - Projeto Web</title>
-    <link rel="stylesheet" href="style.css">
+    <title> Nossa História - Aline & Lucas ❤️</title>
+    <style>
+        /* Animações e Efeitos */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomHero {
+            from { transform: scale(1.08); }
+            to { transform: scale(1); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            color: #4a4a4a;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header.hero {
+            padding: 80px 20px;
+            animation: zoomHero 2s ease-out forwards;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #b03060;
+            margin: 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #8b4444;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 30px;
+            margin: 30px 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            animation: fadeIn 1.2s ease both;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .photo-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            animation: fadeIn 1s ease both;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(176, 48, 96, 0.2);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #b03060;
+            font-weight: 500;
+        }
+
+        .btn-love {
+            border: none;
+            padding: 20px 45px;
+            border-radius: 100px;
+            font-size: 1.2rem;
+            background: #b03060;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(176, 48, 96, 0.3);
+            transition: 0.3s;
+            margin: 40px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .btn-love:hover {
+            background: #d81b60;
+            transform: scale(1.05);
+        }
+
+        #final-surprise {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        footer {
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Aline</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home" class="hero">
-            <h1>Bem-vindo ao Aline</h1>
-            <p>Um projeto web incrível</p>
-            <button class="btn">Começar Agora</button>
+    <!-- Música -->
+    <audio id="loveSong">
+        <source src="MUS/Isa.mp3" type="audio/mpeg"  
+    </audio>
+
+    <div class="container">
+        <header class="hero">
+            <h1>Aline ❤️ Lucas</h1>
+            <p class="subtitle">Nosso primeiro ano juntos</p>
+        </header>
+
+        <section class="card">
+            <p>Há exatamente um ano, a minha vida ganhou um novo sentido. Cada dia ao teu lado tem sido uma prova de que Deus cuida dos detalhes e coloca as pessoas certas nos momentos certos.</p>
+            <p>Obrigado por ser a minha parceira de aventuras, de risadas e de vida.</p>
         </section>
+        <div class="grid">
+            <!-- Foto 60304 - ❤️ -->
+            <div class="photo-item" style="animation-delay: 0.2s;">
+                <img src="IMAGENS/IMG1.jpg">
+                <div class="caption">Amo seu sorriso❤️💍️</div>
+            </div>
 
-        <section id="about" class="about">
-            <h2>Sobre o Projeto</h2>
-            <p>Este é um projeto web moderno desenvolvido com HTML, CSS e JavaScript.</p>
-        </section>
+            <!-- Foto 60313 - Nova Foto -->
+            <div class="photo-item" style="animation-delay: 0.4s;">
+                <img src="IMAGENS/IMG2.jpg" alt="Nós dois">
+                <div class="caption">Amo sua caretas kk ❤️💍 ✨</div>
+            </div>
 
-        <section id="contact" class="contact">
-            <h2>Entre em Contato</h2>
-            <form>
-                <input type="text" placeholder="Seu nome" required>
-                <input type="email" placeholder="Seu email" required>
-                <textarea placeholder="Sua mensagem" rows="5" required></textarea>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-        </section>
-    </main>
+            <!-- Foto 60302 - Caretas -->
+            <div class="photo-item" style="animation-delay: 0.6s;">
+                <img src="IMAGENS/IMG3.jpg" alt="Caretas">
+                <div class="caption">Amo estar com você ❤️</div>
+            </div>
 
-    <footer>
-        <p>&copy; 2026 Aline. Todos os direitos reservados.</p>
-    </footer>
+            <!-- Foto 60303 - Mãos Dadas -->
+            <div class="photo-item" style="animation-delay: 0.8s;">
+                <img src="IMAGENS/IMG4.jpg" alt="Mãos Dadas">
+                <div class="caption">Sei que segurando sua mão posso chegar em qualquer lugar ❤️</div>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+        <button class="btn-love" onclick="revealSurprise()">Clique aqui, meu amor 💌</button> <source src="Isa.mp3" type="audio/mp3"  
+    </audio>
+
+        <div id="final-surprise">
+            <div class="photo-item" style="max-width: 2432px; ma>
+                        <!--Tab to ed>;">
+                <img src="IMAGENS/IMG5.jpg" alt="Onde o coração descansa">
+                <div class="caption">Onde o meu mundo para e o meu coração descansa ❤️</div>
+            </div>
+            
+            <div class="card">
+                <h3>Minha Bênção Que Não Tem Fim</h3>
+                <p><strong>Aline, eu te amo hoje, amanhã e em todos os dias que virão. Feliz 1 ano de nós!</strong></p>
+            </div>
+        </div>
+
+        <footer>
+            Com todo o carinho, do seu Lucas Matheus.
+        </footer>
+    </div>
+
+    <script>
+        function revealSurprise() {
+            // Tocar Música
+            const music = document.getElementById('loveSong');
+            music.play().catch(e => console.log("Áudio aguardando interação."));
+
+            // Mostrar Surpresa
+            const surprise = document.getElementById('final-surprise');
+            surprise.style.display = 'block';
+
+            // Scroll para a surpresa
+            surprise.scrollIntoView({ behavior: 'smooth' });
+    
+            // Mensagem Especial
+            setTimeout(() => {
+                alert('Aline, você é a melhor parte de mim! ❤️');
+            }, 800);
+        }
+    </script>
 </body>
 </html>
+
+❤️💍
