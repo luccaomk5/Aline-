@@ -47,7 +47,7 @@ Aline-/
 
 ## 📄 Licença
 
-Este projeto é de código aberto. Sinta-se livre para usar e modificar.
+Este projeto é de código fecahdo6. Não pode usar e modificar.
 
 ## 👨‍💻 Autor
 
